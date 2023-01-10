@@ -46,7 +46,6 @@ a{
 
 .row{
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -56,6 +55,14 @@ a{
 
 .between-flex{
     justify-content: space-between;
+}
+
+.around-flex{
+    justify-content: space-around;
+}
+
+.centeralign-flex{
+    align-items: center;
 }
 
 .list-nav{
@@ -70,12 +77,12 @@ a{
 
 .button{
     border-radius: 20px;
-    border: 1px solid white;
-    color: black;
+    border: 1px solid transparent;
 }
 
 .button-white{
     background-color: white;
+    color: black;
 }
 
 .hamburger{
@@ -85,24 +92,81 @@ a{
 
 /* main prima section*/
 .col{
-    flex-basis: calc(100% / 3);
+    flex-basis: calc((100% - 75px) / 3);
+    padding: 10px;
 } 
 
 .col-60{
-    flex-basis: calc(100% *2/3);
+    flex-basis: calc((100% - 25px) *2 / 3 );
 }
 
 .card{
     background-color: var(--light-blue);
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 24px;
+    padding: 30px;
+    line-height: 29px;
+    font-size: 15px;
+}
 
+.space-big{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.column-flex{
+    flex-direction: column;
+}
+
+.gap-12{
+    gap: 12px;
+}
+
+.gap-25{
+    gap: 25px;
+}
+
+.text-start{
+    align-items: flex-start;
+    gap: 26px;
+} 
+
+.text-center{
+    text-align: center;
+}
+
+.icon-blue{
+    color: var(--blue);
+    font-size: 75px;
 }
 
 
-/* mediaquery */
+.title-blue{
+    color: var(--blue);
+    padding-top: 5px;
+}
 
-@media  screen and (max-width: 991px) {
+.button-blue{
+    color: white;
+    background-color: var(--blue);
+    padding: 1px 56px;
+}
+
+.hero .button::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f5d1";
+}
+
+.phone-img{
+    margin-bottom: -38px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+
+/* mediaquery DESKTOP FIRST */
+
+@media  screen and (max-width: 768px) {
     .logo-nav{
         padding-left: 10px;
     }
@@ -114,5 +178,33 @@ a{
 
     .list-nav{
         display: none;
+    }
+
+
+    .col-60 .card{
+        flex-direction: column;
+    }
+
+    .col-60 .phone-img{
+        width: 50%;
+        position: relative;
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .col{
+        flex-basis: 100%;
+    }
+
+    .card{
+        align-items: center;
+    }
+
+    .col-60 .phone-img{
+        width: 80%;
+        position: relative;
+        top: 2px;
+        padding: 0;
     }
 }
