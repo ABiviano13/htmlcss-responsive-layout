@@ -1,0 +1,118 @@
+/* regola reset */
+html{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+ol, 
+ul,
+menu
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+:root{
+    --blue: #0084fd;
+    --light-blue: #b5ddff;
+    --purple: #9792e4;
+    --dark: #333;
+    --yellow: #fdc15f;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* nav */
+.main-header{
+    background-color: var(--blue);
+    padding: 19px 0;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex{
+    display: flex;
+}
+
+.between-flex{
+    justify-content: space-between;
+}
+
+.list-nav{
+    color: white;
+    line-height: 38px;
+    font-size: 16px;
+}
+
+.list-nav li{
+    padding: 0 16px;
+} 
+
+.button{
+    border-radius: 20px;
+    border: 1px solid white;
+    color: black;
+}
+
+.button-white{
+    background-color: white;
+}
+
+.hamburger{
+    display: none;
+    color: white;
+}
+
+/* main prima section*/
+.col{
+    flex-basis: calc(100% / 3);
+} 
+
+.col-60{
+    flex-basis: calc(100% *2/3);
+}
+
+.card{
+    background-color: var(--light-blue);
+    border-radius: 8px;
+    padding: 20px;
+
+}
+
+
+/* mediaquery */
+
+@media  screen and (max-width: 991px) {
+    .logo-nav{
+        padding-left: 10px;
+    }
+
+    .hamburger{
+        display: block;
+        padding-right: 10px;
+    }
+
+    .list-nav{
+        display: none;
+    }
+}
