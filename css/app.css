@@ -80,7 +80,7 @@ a{
     border: 1px solid transparent;
 }
 
-.button-white{
+.bg-white{
     background-color: white;
     color: black;
 }
@@ -90,7 +90,7 @@ a{
     color: white;
 }
 
-/* main prima section*/
+/* main hero section*/
 .col{
     flex-basis: calc((100% - 75px) / 3);
     padding: 10px;
@@ -98,14 +98,19 @@ a{
 
 .col-60{
     flex-basis: calc((100% - 25px) *2 / 3 );
+    padding: 10px;
 }
 
 .card{
-    background-color: var(--light-blue);
+    border: 1px solid transparent;
     border-radius: 24px;
     padding: 30px;
     line-height: 29px;
     font-size: 15px;
+}
+
+.card-bg-lb{
+    background-color: var(--light-blue);
 }
 
 .space-big{
@@ -163,6 +168,70 @@ a{
     padding-top: 50px;
 }
 
+/* main developement section */
+.planning{
+    background-color: var(--purple);
+}
+
+.row-plan{
+    width: 60%;
+}
+
+.justify-center{
+   justify-content: center;
+}
+
+.col-50{
+    flex-basis: calc(100% / 2);
+}
+
+.card-plan{
+    border: 1px solid transparent;
+    border-radius: 34px;
+    padding: 10px;
+    line-height: 25px;
+    font-size: 15px;
+    gap: 15px;
+}
+
+.plan-marg{
+    margin-top: 170px;
+    margin-bottom: 50px;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-black{
+    color: black;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.marg-img{
+    margin: 90px 0;
+}
+
+.plann-img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p-plan{
+    margin: 20px 0;
+}
+
+.icon-button{
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background-color: var(--purple);
+    padding: 2px 11px;
+    text-align: center;
+}
+
 
 /* mediaquery DESKTOP FIRST */
 
@@ -190,10 +259,23 @@ a{
         position: relative;
         top: 5px;
     }
+
+
+    .col-50{
+        flex-basis: 100%;
+    }
+
+    .plan-marg{
+        margin-top: 0;
+    }
+
+    .big{
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 460px){
-    .col{
+    .col, .col-50{
         flex-basis: 100%;
     }
 
@@ -206,5 +288,9 @@ a{
         position: relative;
         top: 2px;
         padding: 0;
+    }
+
+    .big{
+        font-size: 20px;
     }
 }
