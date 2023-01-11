@@ -81,7 +81,6 @@ a{
 
 .button{
     border-radius: 20px;
-    border: 1px solid transparent;
 }
 
 .bg-white{
@@ -270,11 +269,13 @@ a{
     margin: 20px 0;
 }
 
-.icon-button{
-    border-radius: 100%;
+.button-purple{
     background-color: var(--purple);
+}
+
+.icon-button{
     padding: 2px 11px;
-    text-align: center;
+    border-radius: 100%;
 }
 
 /* mediaquery developement section */
@@ -301,7 +302,7 @@ a{
 }
 
 /* TESTIMONIALS section */
-.intro-testimonials{
+.intro-testimonials, .title-benefits{
     text-align: center;
 }
 
@@ -358,10 +359,6 @@ a{
 
 /* mediaquery testimonials section */
 
-@media screen and (max-width: 760px) {
-    
-}
-
 @media screen and (max-width: 460px) {
     .testimonials .row{
         gap: 35px;
@@ -378,3 +375,42 @@ a{
     }
 }
 
+/* main benefits section */
+.benefits{
+    background-color: var(--purple);
+    padding: 70px 0;
+}
+
+.title-benefits{
+    font-size: 30px;
+    padding-bottom: 70px;
+}
+
+.text-benefits{
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.title-big{
+    font-size: 60px;
+    padding: 30px 0;
+}
+
+.button-card{
+    padding: 4px 40px;
+    color: white;
+}
+
+/* mediaquery benefits section */
+
+@media  screen and (max-width:760px) {
+    .benefits .col{
+        flex-basis: calc(100% / 2);
+    }
+}
+
+@media  screen and (max-width:460px) {
+    .benefits .col{
+        flex-basis: 100%;
+    }
+}
